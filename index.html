@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade - Aumentar e Diminuir Texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="buttons">
+        <button onclick="alterarTamanhoTexto('aumentar')">Aumentar Texto</button>
+        <button onclick="alterarTamanhoTexto('diminuir')">Diminuir Texto</button>
+    </div>
+
+    <div class="content" id="conteudo">
+        <p>Este é um exemplo de conteúdo. Use os botões acima para aumentar ou diminuir o tamanho do texto.</p>
+        <p>Você pode ajustar o tamanho do texto conforme necessário para facilitar a leitura.</p>
+    </div>
+
+    <script>
+        let tamanhoFonte = 16;
+
+        function alterarTamanhoTexto(acao) {
+            const conteudo = document.getElementById('conteudo');
+            
+            if (acao === 'aumentar') {
+                tamanhoFonte += 2;
+            } else if (acao === 'diminuir') {
+                tamanhoFonte -= 2;
+            }
+
+            conteudo.style.fontSize = `${tamanhoFonte}px`;
+        }
+    </script>
+
+</body>
+</html>
