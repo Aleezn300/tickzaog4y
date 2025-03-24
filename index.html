@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texto - Aumentar e Diminuir Texto</title>
+    <title>Página de Entrada - Acessibilidade</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        .content {
-            font-size: 16px;
-            line-height: 1.6;
+        .container {
+            background-color: white;
+            width: 80%;
+            max-width: 900px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         .buttons {
@@ -24,19 +35,48 @@
             margin: 0 5px;
             font-size: 16px;
             cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-    <div class="buttons">
-        <button onclick="alterarTamanhoTexto('aumentar')">Aumentar Texto</button>
-        <button onclick="alterarTamanhoTexto('diminuir')">Diminuir Texto</button>
-    </div>
+    <div class="container">
+        <h1>Bem-vindo ao Nosso Site</h1>
+        <div class="buttons">
+            <button onclick="alterarTamanhoTexto('aumentar')">Aumentar Texto</button>
+            <button onclick="alterarTamanhoTexto('diminuir')">Diminuir Texto</button>
+        </div>
 
-    <div class="content" id="conteudo">
-        <p>Este é um exemplo de conteúdo. Use os botões acima para aumentar ou diminuir o tamanho do texto.</p>
-        <p>Você pode ajustar o tamanho do texto conforme necessário para facilitar a leitura.</p>
+        <div class="content" id="conteudo">
+            <p>Este é um exemplo de uma página de entrada. Use os botões acima para ajustar o tamanho do texto e melhorar sua leitura.</p>
+            <p>Você pode aumentar ou diminuir o tamanho do texto conforme necessário para facilitar a leitura.</p>
+            <p>Esta página tem a intenção de tornar o conteúdo mais acessível para todos os usuários.</p>
+        </div>
     </div>
 
     <script>
